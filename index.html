@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="java/Remote.js"></script>
+    <script src="java/TiVi.js"></script>
+</head>
+<body>
+
+<script>
+    let tivi = new TiVi(7,10,false);
+    let remote = new Remote("9999");
+    console.log("Trạng thái tắt/bật: "+tivi.status);
+    console.log("Kênh: "+tivi.getChannel());
+    console.log("Âm lượng: "+ tivi.getVolumn());
+
+    remote.turnOnOff();
+    remote.remoteChannel(3);
+    remote.remoteVolumn(2);
+    remote.turnOnOff();
+
+
+
+</script>
+
+</body>
+</html>
